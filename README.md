@@ -79,8 +79,50 @@ If you get yourself registered today at [JLCPCB](https://jlcpcb.com/IAT ) you ge
 ![image](https://user-images.githubusercontent.com/19898602/145043499-ef9f87fd-7355-41e1-b811-59b64a4cef46.png)
 ![image](https://user-images.githubusercontent.com/19898602/145043605-a9708bfb-ba64-4234-b2ec-5d8b5461a43d.png)
 ![image](https://user-images.githubusercontent.com/19898602/145043637-ae2f2185-af05-4e3c-ba3a-83f2710453e0.png)
+![image](https://user-images.githubusercontent.com/19898602/145044301-88f74079-4bf7-4cce-9180-350d46890838.png)
+
+# PROCEDURE
+
+![image](https://user-images.githubusercontent.com/19898602/145044419-b0626b6f-2c89-4e4b-9dff-80e843f7356c.png)
+
+first of all we collect all the required components like Arduino Nano, 0.96" OLED Display, 10W LED, 10K POT, Toggle S/W, Toggle S/W, 2222A Transistor, Custom PCB
+ 
+
+ 
+![image](https://user-images.githubusercontent.com/19898602/145044699-a0c9349d-d1d6-45a3-a32d-303be3b768f7.png)
+
+Then I shholder the Display pins to the PCB
+basically pin cofiguration are as below
+
+I2C display             Arduino
+    SCL                   A5
+    SDA                   A4
+    5V                    5V
+    GND                   GND
+    
+    
+   
+ ![image](https://user-images.githubusercontent.com/19898602/145045082-ee4cfe92-0653-4d8b-bfe4-bdeaa48721ee.png)
+![image](https://user-images.githubusercontent.com/19898602/145045143-516386d6-43af-41e5-a601-db550155900c.png)
+![image](https://user-images.githubusercontent.com/19898602/145045215-f085d65e-a6f3-4642-9e46-ca31cb0f9df2.png)
+
+Then I bring sun board sheet and mark the dimensions on the sheet with the help of scale and pen
+and the I cut those parts with the help of cutter to make the shape of object like gun which we can hold in our hand
 
 
+![image](https://user-images.githubusercontent.com/19898602/145045537-320f997b-fa37-4ffe-88d8-c7b36c5639b6.png)
 
+Then I 3D printed a reflector part and used 10W led diode to make the stroboscope 
+
+![image](https://user-images.githubusercontent.com/19898602/145045949-8e8cdc96-a2ed-4bc1-87ef-6d9c1aaf3899.png)
+![image](https://user-images.githubusercontent.com/19898602/145045992-e482d351-df62-44b6-a060-3682a3faf95f.png)
+
+
+Then I install the potentiometer, toggle switch and 0.96'' oled display on the other side of strobo scope and 
+fit the panel with the body using super glue. 
+
+In this way sctroboscope construction is done now it is time for testing 
+
+![10000000_371783094596508_6335027578223470645_n](https://user-images.githubusercontent.com/19898602/145046692-c8939218-628c-4bd2-be4e-06329e28fdb8.gif)
 
 
