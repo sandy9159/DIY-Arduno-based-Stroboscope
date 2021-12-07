@@ -61,4 +61,26 @@ So, we required approximately 14V per column.
 
 After calculating required voltage for powering the LED, let’s calculate supply voltage by LM317
 
+# CUSTOM PCB
+
+
+
+![image](https://user-images.githubusercontent.com/19898602/145042790-b83b088f-418e-4b80-a4d1-db8233d55d57.png)
+![image](https://user-images.githubusercontent.com/19898602/145042732-142f6179-cced-4419-ab40-a6e7b124ccf6.png)
+
+I have design circuit and PCB in [easyEDA](https://easyeda.com/) and ordered PCB from [JLCPCB](https://jlcpcb.com/IAT )
+
+This is the link of [PCB editabl file](https://oshwlab.com/sharmaz747/multipurpose-pcb)
+
+If you seriously need quality PCB quickly in your hand then you must have to try [JLCPCB](https://jlcpcb.com/IAT ) PCB manufacturing service.
+They have Special offer of $2 for 1-4 Layer PCBs, free SMT assembly monthly.
+If you get yourself registered today at [JLCPCB](https://jlcpcb.com/IAT ) you get welcome coupon from [JLCPCB](https://jlcpcb.com/IAT ).
+
+![image](https://user-images.githubusercontent.com/19898602/145043499-ef9f87fd-7355-41e1-b811-59b64a4cef46.png)
+![image](https://user-images.githubusercontent.com/19898602/145043605-a9708bfb-ba64-4234-b2ec-5d8b5461a43d.png)
+![image](https://user-images.githubusercontent.com/19898602/145043637-ae2f2185-af05-4e3c-ba3a-83f2710453e0.png)
+
+
+
+
 
