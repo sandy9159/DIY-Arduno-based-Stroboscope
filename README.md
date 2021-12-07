@@ -121,6 +121,124 @@ Then I 3D printed a reflector part and used 10W led diode to make the stroboscop
 Then I install the potentiometer, toggle switch and 0.96'' oled display on the other side of strobo scope and 
 fit the panel with the body using super glue. 
 
+# CODE
+
+```
+
+#include <Wire.h>
+#include "SSD1306Ascii.h"
+#include "SSD1306AsciiWire.h"
+#define I2C_ADDRESS 0x3C
+#define RST_PIN -1
+SSD1306AsciiWire oled;
+
+
+const int led = 12;
+int customDelay,customDelayMapped; // Defines variables
+ 
+
+   
+void setup() {
+  Wire.begin();
+  Wire.setClock(400000L);
+  Serial.begin(9600);
+#if RST_PIN >= 0
+  oled.begin(&Adafruit128x64, I2C_ADDRESS, RST_PIN);
+#else // RST_PIN >= 0
+  oled.begin(&Adafruit128x64, I2C_ADDRESS);
+#endif // RST_PIN >= 0
+
+  oled.setFont(Adafruit5x7);
+  oled.clear();
+  pinMode(led,OUTPUT);
+  
+  oled.set2X();
+  oled.setCursor(0, 0);
+  oled.println("");
+  oled.set1X();
+  oled.setCursor(0, 13);
+  oled.println("");
+  oled.set2X();
+  oled.setCursor(0, 20);
+  oled.println("  WELCOME  ");
+  oled.set1X();
+  oled.println("");
+oled.set2X();
+  oled.setCursor(40, 25);
+  delay(1400);
+  
+}
+
+
+  
+void loop() {
+ 
+  
+   staticmenu();
+  
+ customDelayMapped = speedUp(); // Gets custom delay values from the custom speedUp function
+  // Makes pules with custom delay, depending on the Potentiometer, from which the speed of the motor depends
+  digitalWrite(led, HIGH);
+  delayMicroseconds(200);
+  digitalWrite(led, LOW);
+  delay(customDelayMapped);
+Serial.println(customDelayMapped);
+  
+}
+  
+  
+  int speedUp() {
+  int customDelay = analogRead(A0); // Reads the potentiometer
+  int newCustom = map(customDelay, 0, 1023, 1,50); // Convrests the read values of the potentiometer from 0 to 1023 into desireded delay values (300 to 4000)
+  return newCustom;  
+    
+}
+  
+  00
+  
+  .
+1141,,j    ,
+//.,       m[p
+0.....
+00000
+.444444444444444    
+
+
+
+  
+  
+
+void staticmenu() {
+  oled.set2X();
+  oled.setCursor(0, 0);
+  oled.println("STROBOSCOPE");
+  oled.set1X();
+  oled.setCursor(0, 13);
+  oled.println("---------------------");
+  oled.set2X();
+  oled.setCursor(0, 20);
+  oled.println("    RPM   ");
+  oled.set1X();
+  oled.println("");
+oled.set2X();
+  oled.setCursor(40, 25);
+   
+ 
+   oled.print( customDelayMapped*99, DEC);
+  
+// if (customDelayMapped % 100 == 0){
+//    oled.clear();
+// }
+  
+  
+  //oled.display();
+
+}
+
+
+```
+
+
 In this way sctroboscope construction is done now it is time for testing 
 
 ![10000000_371783094596508_6335027578223470645_n](https://user-images.githubusercontent.com/19898602/145046692-c8939218-628c-4bd2-be4e-06329e28fdb8.gif)
